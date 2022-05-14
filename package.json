@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "npx sass src/sass/:dist/css/ --watch"
+    "ts": "npx tsc --watch",
+    "sass": "npx sass src/sass/:dist/css/ --watch",
+    "dev": "npm run ts & npm run sass",
+    "serve": "php -S localhost:8000",
+    "build": "npx rollup -c -w",
+    "test": "node dist/js/components/rollup-test/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "rollup": "^2.73.0",
+    "rollup-plugin-typescript": "^1.0.1",
     "sass": "^1.51.0",
     "typescript": "^4.6.4"
   }
