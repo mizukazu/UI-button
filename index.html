@@ -38,13 +38,29 @@
     <button class="button button-blue button-rounded" type="button">ボタン</button>
     <button class="button button-orange button-rounded" type="button">ボタン</button>
   </div>
-  <script>
+  <script type="module" src="dist/js/components/button/index.js"></script>
+  <script type="module">
+    import { createButton, ButtonColors } from './dist/js/components/button/index.js';
     const button = document.querySelectorAll('.button');
     console.log(button);
 
     button[0].addEventListener('click', () => {
       console.log('クリックされました。');
     });
+
+    const params = {
+      color: ButtonColors.purple,
+      rounded: false
+    }
+    const buttonJS = createButton('ボタン', params);
+    console.log(buttonJS);
+
+    const body = document.querySelector('body');
+    const div = document.createElement('div');
+    div.classList.add('btn-group');
+    div.appendChild(buttonJS);
+    body.appendChild(div)
+    console.log(body);
   </script>
 </body>
 </html>
