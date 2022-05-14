@@ -1,1 +1,1 @@
-const test:string = 'test';
+export * from './button';
