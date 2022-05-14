@@ -1,0 +1,51 @@
+@use 'variables' as var;
+
+.button {
+  width: 100%;
+  max-width: 80px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 4px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .6;
+  }
+}
+
+/** サイズ */
+.button-small {
+  max-width: 70px;
+  font-size: .8rem;
+}
+.button-medium {
+  max-width: 90px;
+  font-size: 1.2rem;
+}
+.button-large {
+  max-width: 100px;
+  font-size: 1.4rem;
+}
+
+/** 状態 */
+.button-rounded {
+  border-radius: 100px;
+}
+.button-outlined {
+  background: #fff !important;
+  color: #EB5353 !important;
+}
+
+/** 配色 */
+@each $key, $val in var.$button-colors {
+  .button-#{$key} {
+    background: $val;
+    border: 1px solid $val;
+    color: #fff;
+  }
+}

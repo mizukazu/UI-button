@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.button {
+  width: 100%;
+  max-width: 80px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 4px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  opacity: 0.6;
+}
+
+/** サイズ */
+.button-small {
+  max-width: 70px;
+  font-size: 0.8rem;
+}
+
+.button-medium {
+  max-width: 90px;
+  font-size: 1.2rem;
+}
+
+.button-large {
+  max-width: 100px;
+  font-size: 1.4rem;
+}
+
+/** 状態 */
+.button-rounded {
+  border-radius: 100px;
+}
+
+.button-outlined {
+  background: #fff !important;
+  color: #EB5353 !important;
+}
+
+/** 配色 */
+.button-red {
+  background: #EB5353;
+  border: 1px solid #EB5353;
+  color: #fff;
+}
+
+.button-yellow {
+  background: #f6da3c;
+  border: 1px solid #f6da3c;
+  color: #fff;
+}
+
+.button-green {
+  background: #36AE7C;
+  border: 1px solid #36AE7C;
+  color: #fff;
+}
+
+.button-blue {
+  background: #0E49B5;
+  border: 1px solid #0E49B5;
+  color: #fff;
+}
+
+.button-orange {
+  background: #FFA45B;
+  border: 1px solid #FFA45B;
+  color: #fff;
+}
+
+.button-skyblue {
+  background: #3DB2FF;
+  border: 1px solid #3DB2FF;
+  color: #fff;
+}
+
+.button-navy {
+  background: #187498;
+  border: 1px solid #187498;
+  color: #fff;
+}
+
+.button-purple {
+  background: #b057d3;
+  border: 1px solid #b057d3;
+  color: #fff;
+}
+
+/*# sourceMappingURL=button.css.map */

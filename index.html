@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/button.css">
+  <title>Document</title>
+  <style>
+    .btn-group {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 32px;
+    }
+    .btn-group .button {
+      margin: 12px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn-group">
+    <button class="button button-red button-small" type="button">ボタン</button>
+    <button class="button button-yellow" type="button">ボタン</button>
+    <button class="button button-green button-medium" type="button">ボタン</button>
+    <button class="button button-navy button-large" type="button">ボタン</button>
+    <button class="button button-purple" type="button">ボタン</button>
+    <button class="button button-skyblue" type="button">ボタン</button>
+    <button class="button button-blue" type="button">ボタン</button>
+    <button class="button button-orange" type="button">ボタン</button>
+  </div>
+  <div class="btn-group">
+    <button class="button button-red button-rounded" type="button">ボタン</button>
+    <button class="button button-yellow button-rounded" type="button">ボタン</button>
+    <button class="button button-green button-rounded" type="button">ボタン</button>
+    <button class="button button-navy button-rounded" type="button">ボタン</button>
+    <button class="button button-purple button-rounded" type="button">ボタン</button>
+    <button class="button button-skyblue button-rounded" type="button">ボタン</button>
+    <button class="button button-blue button-rounded" type="button">ボタン</button>
+    <button class="button button-orange button-rounded" type="button">ボタン</button>
+  </div>
+  <script>
+    const button = document.querySelectorAll('.button');
+    console.log(button);
+
+    button[0].addEventListener('click', () => {
+      console.log('クリックされました。');
+    });
+  </script>
+</body>
+</html>
