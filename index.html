@@ -40,7 +40,7 @@
   </div>
   <script type="module" src="dist/js/components/button/index.js"></script>
   <script type="module">
-    import { createButton, ButtonColors } from './dist/js/components/button/index.js';
+    import { createButton, ButtonColors, ButtonSize } from './dist/js/components/button/index.js';
     const button = document.querySelectorAll('.button');
     console.log(button);
 
@@ -49,8 +49,10 @@
     });
 
     const params = {
-      color: ButtonColors.purple,
-      rounded: false
+      color: 'navy',
+      size: 'small',
+      rounded: false,
+
     }
     const buttonJS = createButton('ボタン', params);
     console.log(buttonJS);
@@ -61,6 +63,7 @@
     div.appendChild(buttonJS);
     body.appendChild(div)
     console.log(body);
+  
   </script>
 </body>
 </html>

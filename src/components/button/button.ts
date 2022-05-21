@@ -1,9 +1,3 @@
-interface ButtonParams {
-  color?: ButtonColors,
-  size?: number,
-  rounded?: boolean,
-}
-
 /**
  * button要素を作成する
  * create a button element
@@ -19,9 +13,23 @@ export const createButton = (text: string, params?: ButtonParams): HTMLButtonEle
   if(params) {
     params.color && button.classList.add(`button-${params.color}`);
     params.rounded && button.classList.add(`button-rounded`);
+    params.size && button.classList.add(BUTTONSIZE_TO_CLASS[params.size]);
   }
   return button;
 };
+
+interface ButtonParams {
+  color?: ButtonColors,
+  size?: ButtonSize,
+  rounded?: boolean,
+  onClick?: () => unknown,
+}
+
+export enum ButtonSize {
+  small = 'small',
+  medium = 'medium',
+  large = 'large'
+}
 
 export enum ButtonColors {
   red = 'red',
@@ -30,4 +38,10 @@ export enum ButtonColors {
   blue = 'blue',
   purple = 'purple',
   orange = 'orange'
+}
+
+const BUTTONSIZE_TO_CLASS: Record<ButtonSize, string> = {
+  'small': 'button-small',
+  'medium': 'button-medium',
+  'large': 'button-large',
 }

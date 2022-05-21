@@ -15,9 +15,16 @@ const createButton = (text, params) => {
     if (params) {
         params.color && button.classList.add(`button-${params.color}`);
         params.rounded && button.classList.add(`button-rounded`);
+        params.size && button.classList.add(BUTTONSIZE_TO_CLASS[params.size]);
     }
     return button;
 };
+var ButtonSize;
+(function (ButtonSize) {
+    ButtonSize["small"] = "small";
+    ButtonSize["medium"] = "medium";
+    ButtonSize["large"] = "large";
+})(ButtonSize || (ButtonSize = {}));
 var ButtonColors;
 (function (ButtonColors) {
     ButtonColors["red"] = "red";
@@ -27,5 +34,10 @@ var ButtonColors;
     ButtonColors["purple"] = "purple";
     ButtonColors["orange"] = "orange";
 })(ButtonColors || (ButtonColors = {}));
+const BUTTONSIZE_TO_CLASS = {
+    'small': 'button-small',
+    'medium': 'button-medium',
+    'large': 'button-large',
+};
 
-export { ButtonColors, createButton };
+export { ButtonColors, ButtonSize, createButton };
